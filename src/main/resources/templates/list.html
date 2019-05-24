@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-<a href="/add">Add a Msg</a><br />
+<a href="/add">Add a Message</a><br />
+<div th:each="msg : ${msgs}">
+    <div th:if="${msg.picture}" !="null">
+        <img th:src="${msg.picture}" />
+        <hr />
+    </div>
+</div>
 <table>
     <tr>
         <th>Content</th>

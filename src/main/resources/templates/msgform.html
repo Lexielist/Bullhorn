@@ -5,7 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/add">Add a Msg</a><br />
+<a href="/add">Add a Message</a><br />
+
+<br /><br />
+<h1>Spring Boot file upload example</h1>
+<form method="POST" action="/add" th:object="${msg}"
+      enctype="multipart/form-data">
+
+    <input type="file" name="file" /><br /><br />
+    <input type="submit" value="Submit" />
+    <</form>
+
 
 <form action="#"
       th:action="@{/process}"

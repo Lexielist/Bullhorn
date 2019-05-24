@@ -14,6 +14,9 @@ public class Msg {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @NotNull
+    @Size(max = 150)
+    private String picture;
 
     @NotNull
     @Size(max = 150)
@@ -58,6 +61,14 @@ public class Msg {
 
     public void setSentby(String sentby) {
         this.sentby = sentby;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }
 
